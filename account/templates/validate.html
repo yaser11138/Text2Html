@@ -1,0 +1,18 @@
+{% extends "login.html" %}
+{% block title %}email verification{% endblock %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group first">
+                <label for="pass">Verification Code</label>
+                <input type="text" class="form-control" id="pass" name="passcode">
+                </div>
+                <input type="submit" value="Sign Up" class="btn btn-block btn-primary">
+</form>
+{% if error %}
+    <p>passcode is not correct</p>
+{% elif expire %}
+    <p>this passcode is expired a new passcode will be sent to your email address</p>
+{% endif %}
+{% endblock %}

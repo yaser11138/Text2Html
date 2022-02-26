@@ -1,0 +1,16 @@
+{% extends "inner-page.html" %}
+
+{% block section %}
+    <div class="portfolio-info">
+    {% for item in converts %}
+      <div class="portfolio-info portfolio-details">
+              <h3>Project {{ item.id }}</h3>
+              <ul>
+                <li><strong>Category</strong>: Text to Html</li>
+                  <li><strong>Details</strong>: {{ item }}</li>
+                <li><strong>Project date</strong>:{{ item.date }}</li>
+              </ul>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}
