@@ -1,5 +1,4 @@
 # Text2Html
-Config files for my GitHub profile.
 hi and welcome to my project
 this is my first project that i make it with django
 
